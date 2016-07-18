@@ -1,5 +1,5 @@
 {
-  "name": "bower_components",
+  "name": "portfolio",
   "homepage": "https://github.com/nick11roberts/portfolio",
   "authors": [
     "nick11roberts <n3robert@ucsd.edu>"
@@ -12,8 +12,12 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "public/js/bower",
+    "public/bower",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "Skeleton-Sass": "skeleton-scss#*",
+    "parallax.js": "^1.4.2"
+  }
 }
