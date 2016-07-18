@@ -1,0 +1,19 @@
+{
+  "name": "bower_components",
+  "homepage": "https://github.com/nick11roberts/portfolio",
+  "authors": [
+    "nick11roberts <n3robert@ucsd.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/js/bower",
+    "test",
+    "tests"
+  ]
+}
