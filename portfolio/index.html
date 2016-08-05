@@ -13,7 +13,6 @@
    }
 </style>
 
-<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 <!-- Load the Paper.js library -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
 <!-- Define inlined JavaScript -->
@@ -30,27 +29,19 @@
       var NUM_COLUMN_POLYGONS = getRandomInt(20, 40);
       var NUM_VERTICES = getRandomInt(2, 5);
 
-      var WINDOW_WIDTH = window.innerWidth
-         || document.documentElement.clientWidth
-         || document.body.clientWidth;
+      // Get a reference to the canvas object
+		var canvas = document.getElementById('rpolygonCanvas');
 
-         var WINDOW_HEIGHT = window.innerHeight
-         || document.documentElement.clientHeight
-         || document.body.clientHeight;
+      // Create an empty project and a view for the canvas:
+		paper.setup(canvas);
 
       // Must be odd so that there are no gaps on edge of the window
       var NUM_ROWS = (NUM_ROW_POLYGONS * 2) - 1;
       var NUM_COLUMNS = (NUM_COLUMN_POLYGONS * 2) - 1;
-      var CELL_WIDTH = WINDOW_WIDTH / (NUM_COLUMNS);
-      var CELL_HEIGHT = WINDOW_HEIGHT / (NUM_ROWS);
+      var CELL_WIDTH = canvas.scrollWidth / (NUM_COLUMNS);
+      var CELL_HEIGHT = canvas.scrollHeight / (NUM_ROWS);
       var rand = new Array(NUM_VERTICES);
       var paths = new Array(NUM_VERTICES)
-
-      // Get a reference to the canvas object
-		var canvas = document.getElementById('rpolygonCanvas');
-
-		// Create an empty project and a view for the canvas:
-		paper.setup(canvas);
 
       for(i = 0; i < NUM_COLUMNS; i+=2 ){
 
