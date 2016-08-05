@@ -18,12 +18,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
 <!-- Define inlined JavaScript -->
 <script type="text/javascript">
+
+   function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
 	// Only executed our code once the DOM is ready.
 	window.onload = function() {
 
-      var NUM_ROW_POLYGONS = 20;
-      var NUM_COLUMN_POLYGONS = 40;
-      var NUM_VERTICES = 2;
+      var NUM_ROW_POLYGONS = getRandomInt(20, 40);
+      var NUM_COLUMN_POLYGONS = getRandomInt(20, 40);
+      var NUM_VERTICES = getRandomInt(2, 5);
 
       var WINDOW_WIDTH = window.innerWidth
          || document.documentElement.clientWidth
