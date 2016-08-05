@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+   canvas {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:-1;
+   }
+</style>
+
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
+<!-- Define inlined JavaScript -->
+<script type="text/javascript">
+	// Only executed our code once the DOM is ready.
+	window.onload = function() {
+
+      var NUM_ROW_POLYGONS = 20;
+      var NUM_COLUMN_POLYGONS = 40;
+      var NUM_VERTICES = 2;
+
+      var WINDOW_WIDTH = window.innerWidth
+         || document.documentElement.clientWidth
+         || document.body.clientWidth;
+
+         var WINDOW_HEIGHT = window.innerHeight
+         || document.documentElement.clientHeight
+         || document.body.clientHeight;
+
+      // Must be odd so that there are no gaps on edge of the window
+      var NUM_ROWS = (NUM_ROW_POLYGONS * 2) - 1;
+      var NUM_COLUMNS = (NUM_COLUMN_POLYGONS * 2) - 1;
+      var CELL_WIDTH = WINDOW_WIDTH / (NUM_COLUMNS);
+      var CELL_HEIGHT = WINDOW_HEIGHT / (NUM_ROWS);
+      var rand = new Array(NUM_VERTICES);
+      var paths = new Array(NUM_VERTICES)
+
+      // Get a reference to the canvas object
+		var canvas = document.getElementById('backgroundCanvas');
+
+		// Create an empty project and a view for the canvas:
+		paper.setup(canvas);
+
+      for(i = 0; i < NUM_COLUMNS; i+=2 ){
+
+         for(j = 0; j < NUM_ROWS; j+=2 ){
+
+            for( k = 0; k < NUM_VERTICES; k++ ){
+            	rand[k] = new paper.Point(
+                  (Math.random() * CELL_WIDTH) + (i * CELL_WIDTH),
+            		(Math.random() * CELL_HEIGHT) + (j * CELL_HEIGHT));
+            }
+
+            for( k = 0; k < NUM_VERTICES; k++ ){
+            	paths[k] = new paper.Path.Line(rand[k],
+            							 rand[(k + 1) % NUM_VERTICES]);
+            	paths[k].strokeColor = 'red';
+            }
+
+         }
+
+      }
+
+	}
+</script>
+
+</head>
+<body>
+
+   <canvas id="backgroundCanvas">
+      Your browser does not support the canvas element.
+    </canvas>
+
+</body>
+</html>
