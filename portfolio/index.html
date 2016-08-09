@@ -2,41 +2,97 @@
 <html>
 <head>
 
-<style>
-   canvas {
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index:-1;
-   }
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Pacifico" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="stylesheets/index.css">
 
+<script src="https://use.fontawesome.com/9fb8fdf036.js"></script>
 <!-- Load the Paper.js library -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
 <script type="text/javascript" src="node_modules/rpolygon/rpolygon.js"></script>
 <!-- Define inlined JavaScript -->
 <script type="text/javascript">
 
-	// Only executed our code once the DOM is ready.
-	window.onload = function() {
-
-      // Get a reference to the canvas object
-		var canvas = document.getElementById('rpolygonCanvas');
-
-      fillCanvas(canvas, '#adeba8');
-
-	}
+   // Only executed our code once the DOM is ready.
+   window.onload = function() {
+      fillCanvas(document.getElementById('background'), '#FFA7A7', 20, 20, 3);
+   }
 
 </script>
 
 </head>
 <body>
 
-   <canvas id="rpolygonCanvas">
+   <canvas id="background">
       Your browser does not support the canvas element.
-    </canvas>
+   </canvas>
+
+   <h1>
+      Nicholas Roberts
+   </h1>
+
+   <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, magna varius dapibus scelerisque, nisi libero facilisis odio, sed elementum tellus neque at dui. Suspendisse consequat felis non blandit semper. Etiam et ullamcorper enim, nec varius leo. Donec velit dui, molestie eu nisi vel, volutpat ultricies sem. Nam nec nulla quis nisl finibus molestie. Curabitur vel nunc luctus, aliquam dolor a, iaculis leo. Cras consectetur lectus sed iaculis pharetra.
+
+      Etiam tincidunt ac risus sed rutrum. Aliquam venenatis mattis nulla sed venenatis. Cras efficitur facilisis neque, id posuere neque efficitur eu. In sed ligula tortor. Donec scelerisque turpis at imperdiet molestie. Duis rutrum lorem a sagittis facilisis. Quisque eget est bibendum, faucibus odio vel, efficitur nulla. Etiam vehicula orci ut rutrum hendrerit. Vestibulum porttitor nulla non velit varius pulvinar. Proin ut nisl nulla.
+
+      Morbi convallis, ipsum in lobortis bibendum, mauris risus vulputate mauris, ac pulvinar est nunc eu leo. Nulla venenatis sed dui quis mattis. Suspendisse fringilla neque nec turpis aliquet posuere. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sem congue, luctus risus ac, semper diam. In id efficitur justo. Proin laoreet nisl feugiat sapien pulvinar consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean odio tortor, porttitor a dapibus sit amet, posuere ut nulla. Vivamus et quam consectetur, efficitur nunc maximus, semper mi. Suspendisse sodales auctor ligula vel elementum. Suspendisse id nisi sit amet ipsum sodales hendrerit eget vitae metus. Donec in consequat dolor, id rutrum dui.
+
+      Sed sagittis eget mi et finibus. Praesent dignissim quis leo at tempor. Nulla in nunc nec massa lobortis dignissim. Praesent sollicitudin purus quam, id viverra purus egestas eu. Fusce in est egestas, aliquam orci at, venenatis nisi. Donec sit amet orci lacus. Nulla quis tincidunt dolor, vitae sagittis mi. Donec urna velit, maximus sit amet nulla in, aliquet blandit metus. Phasellus aliquet eu sapien non dictum. Quisque posuere lobortis mauris ac interdum. Nunc et dictum est. Integer turpis libero, sollicitudin in augue quis, tincidunt cursus augue. Nam sit amet sapien vitae nulla aliquam interdum eu quis orci.
+
+      Sed euismod mollis nisl, id lacinia lacus porttitor eget. Curabitur auctor neque velit, non scelerisque dolor aliquam id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis dui quam, facilisis quis scelerisque et, posuere facilisis tortor. Sed a interdum metus, ac rhoncus nisl. Nullam posuere magna in arcu ultricies convallis. Curabitur rhoncus purus mauris, feugiat fermentum urna laoreet eu. Nulla facilisi. Vivamus sem purus, vestibulum vitae eleifend quis, condimentum vitae dolor. Proin sed libero quis ante luctus finibus.
+   </p>
+
+   <h2>
+      Developer
+   </h2>
+
+   <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, magna varius dapibus scelerisque, nisi libero facilisis odio, sed elementum tellus neque at dui. Suspendisse consequat felis non blandit semper. Etiam et ullamcorper enim, nec varius leo. Donec velit dui, molestie eu nisi vel, volutpat ultricies sem. Nam nec nulla quis nisl finibus molestie. Curabitur vel nunc luctus, aliquam dolor a, iaculis leo. Cras consectetur lectus sed iaculis pharetra.
+
+      Etiam tincidunt ac risus sed rutrum. Aliquam venenatis mattis nulla sed venenatis. Cras efficitur facilisis neque, id posuere neque efficitur eu. In sed ligula tortor. Donec scelerisque turpis at imperdiet molestie. Duis rutrum lorem a sagittis facilisis. Quisque eget est bibendum, faucibus odio vel, efficitur nulla. Etiam vehicula orci ut rutrum hendrerit. Vestibulum porttitor nulla non velit varius pulvinar. Proin ut nisl nulla.
+
+      Morbi convallis, ipsum in lobortis bibendum, mauris risus vulputate mauris, ac pulvinar est nunc eu leo. Nulla venenatis sed dui quis mattis. Suspendisse fringilla neque nec turpis aliquet posuere. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sem congue, luctus risus ac, semper diam. In id efficitur justo. Proin laoreet nisl feugiat sapien pulvinar consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean odio tortor, porttitor a dapibus sit amet, posuere ut nulla. Vivamus et quam consectetur, efficitur nunc maximus, semper mi. Suspendisse sodales auctor ligula vel elementum. Suspendisse id nisi sit amet ipsum sodales hendrerit eget vitae metus. Donec in consequat dolor, id rutrum dui.
+
+      Sed sagittis eget mi et finibus. Praesent dignissim quis leo at tempor. Nulla in nunc nec massa lobortis dignissim. Praesent sollicitudin purus quam, id viverra purus egestas eu. Fusce in est egestas, aliquam orci at, venenatis nisi. Donec sit amet orci lacus. Nulla quis tincidunt dolor, vitae sagittis mi. Donec urna velit, maximus sit amet nulla in, aliquet blandit metus. Phasellus aliquet eu sapien non dictum. Quisque posuere lobortis mauris ac interdum. Nunc et dictum est. Integer turpis libero, sollicitudin in augue quis, tincidunt cursus augue. Nam sit amet sapien vitae nulla aliquam interdum eu quis orci.
+
+      Sed euismod mollis nisl, id lacinia lacus porttitor eget. Curabitur auctor neque velit, non scelerisque dolor aliquam id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis dui quam, facilisis quis scelerisque et, posuere facilisis tortor. Sed a interdum metus, ac rhoncus nisl. Nullam posuere magna in arcu ultricies convallis. Curabitur rhoncus purus mauris, feugiat fermentum urna laoreet eu. Nulla facilisi. Vivamus sem purus, vestibulum vitae eleifend quis, condimentum vitae dolor. Proin sed libero quis ante luctus finibus.
+   </p>
+
+   <h3>
+      Developer
+   </h3>
+
+   <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia, magna varius dapibus scelerisque, nisi libero facilisis odio, sed elementum tellus neque at dui. Suspendisse consequat felis non blandit semper. Etiam et ullamcorper enim, nec varius leo. Donec velit dui, molestie eu nisi vel, volutpat ultricies sem. Nam nec nulla quis nisl finibus molestie. Curabitur vel nunc luctus, aliquam dolor a, iaculis leo. Cras consectetur lectus sed iaculis pharetra.
+
+      Etiam tincidunt ac risus sed rutrum. Aliquam venenatis mattis nulla sed venenatis. Cras efficitur facilisis neque, id posuere neque efficitur eu. In sed ligula tortor. Donec scelerisque turpis at imperdiet molestie. Duis rutrum lorem a sagittis facilisis. Quisque eget est bibendum, faucibus odio vel, efficitur nulla. Etiam vehicula orci ut rutrum hendrerit. Vestibulum porttitor nulla non velit varius pulvinar. Proin ut nisl nulla.
+
+      Morbi convallis, ipsum in lobortis bibendum, mauris risus vulputate mauris, ac pulvinar est nunc eu leo. Nulla venenatis sed dui quis mattis. Suspendisse fringilla neque nec turpis aliquet posuere. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse faucibus sem congue, luctus risus ac, semper diam. In id efficitur justo. Proin laoreet nisl feugiat sapien pulvinar consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean odio tortor, porttitor a dapibus sit amet, posuere ut nulla. Vivamus et quam consectetur, efficitur nunc maximus, semper mi. Suspendisse sodales auctor ligula vel elementum. Suspendisse id nisi sit amet ipsum sodales hendrerit eget vitae metus. Donec in consequat dolor, id rutrum dui.
+
+      Sed sagittis eget mi et finibus. Praesent dignissim quis leo at tempor. Nulla in nunc nec massa lobortis dignissim. Praesent sollicitudin purus quam, id viverra purus egestas eu. Fusce in est egestas, aliquam orci at, venenatis nisi. Donec sit amet orci lacus. Nulla quis tincidunt dolor, vitae sagittis mi. Donec urna velit, maximus sit amet nulla in, aliquet blandit metus. Phasellus aliquet eu sapien non dictum. Quisque posuere lobortis mauris ac interdum. Nunc et dictum est. Integer turpis libero, sollicitudin in augue quis, tincidunt cursus augue. Nam sit amet sapien vitae nulla aliquam interdum eu quis orci.
+
+      Sed euismod mollis nisl, id lacinia lacus porttitor eget. Curabitur auctor neque velit, non scelerisque dolor aliquam id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis dui quam, facilisis quis scelerisque et, posuere facilisis tortor. Sed a interdum metus, ac rhoncus nisl. Nullam posuere magna in arcu ultricies convallis. Curabitur rhoncus purus mauris, feugiat fermentum urna laoreet eu. Nulla facilisi. Vivamus sem purus, vestibulum vitae eleifend quis, condimentum vitae dolor. Proin sed libero quis ante luctus finibus.
+   </p>
+
+   <br/>
+
+   Find me elsewhere on the internet:
+   <i class="fa fa-github" aria-hidden="true"></i>
+   <i class="fa fa-linkedin" aria-hidden="true"></i>
+   <i class="fa fa-instagram" aria-hidden="true"></i>
+   <i class="fa fa-twitter" aria-hidden="true"></i>
+   <i class="fa fa-facebook" aria-hidden="true"></i>
+   <i class="fa fa-google-plus" aria-hidden="true"></i>
+   <i class="fa fa-snapchat" aria-hidden="true"></i>
+   <i class="fa fa-pinterest" aria-hidden="true"></i>
+
+   <br/>
+   <br/>
+
+   Built with much
+   <i class="fa fa-heart-o" aria-hidden="true"></i>
+   using Docker, npm, Sass, and Ember.js
 
 </body>
 </html>
