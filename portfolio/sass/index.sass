@@ -1,21 +1,41 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css)
 
-$font-stack: 'Josefin Slab', serif, Helvetica, sans-serif, 'Pacifico', cursive
-$h1font: 'Pacifico', cursive
-$h2font: 'Pacifico', cursive
-$h3font: 'Pacifico', cursive
-$pfont: 'Josefin Slab', serif
+$font-stack: 'Kameron', serif, Helvetica, serif, 'Sansita One', cursive
+$h1font: 'Sansita One', cursive
+$h2font: 'Sansita One', cursive
+$h3font: 'Sansita One', cursive
+$pfont: 'Kameron', serif
 
-$color-primary-0: #B49E9E
-$color-primary-1: #393939
-$color-primary-2: #393939
-$color-primary-3: #AD2D2D
-$color-primary-4: #FFA7A7
+$color-primary-0: #393939
+$color-primary-1: #E2E0DE
+$color-primary-2: #E2E0DE
+$color-primary-3: #E2E0DE
+$color-primary-4: #555555
+
+$sidebar-width: 15%
+$middle-padding: 30px
+$footer-padding: 20px
+$footer-height: 75px + $footer-padding
+
+*
+   margin: 0
+   padding: 0
+
+html
+   height: 100%
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary
+   display: block
 
 body
    font: 100% $font-stack
    color: $color-primary-2
    background-color: $color-primary-0
+   height: 100%
+
+
+footer
+   background-color: $color-primary-4
 
 canvas
    position: fixed
@@ -28,18 +48,72 @@ canvas
 p
    font-family: $pfont
    color: $color-primary-2
+   line-height: 1.5
 
 h1
    font-size: 200%
    font-family: $h1font
    color: $color-primary-1
+   line-height: 3.0
 
 h2
    font-size: 130%
    font-family: $h2font
    color: $color-primary-3
+   line-height: 2.5
 
 h3
    font-size: 100%
    font-family: $h3font
    color: $color-primary-3
+   line-height: 2.0
+
+.wrapper
+   width: 100%
+   min-width: 1000px
+   min-height: 100%
+   height: auto !important
+   height: 100%
+
+.middle
+   width: 100%
+   padding: 0 0 $footer-height
+   position: relative
+
+.middle:after
+   display: table
+   clear: both
+   content: ''
+
+.container
+   width: 100%
+   float: left
+   overflow: hidden
+
+.content
+   padding: 0 0 0 $sidebar-width
+
+.left-sidebar
+   float: left
+   width: $sidebar-width
+   margin-left: -100%
+   position: relative
+
+.footer
+   margin: -$footer-height auto 0
+   min-width: 1000px
+   height: $footer-height
+   position: relative
+
+.logo
+   display: block
+   margin: 10px
+   width: $sidebar-width
+   position: fixed !important
+
+#middle-content
+   padding: $middle-padding
+
+#footer-content
+   padding: 0 0 0 $footer-padding
+   text-align: center
