@@ -15,7 +15,7 @@ $color-primary-4: #555555
 $sidebar-width: 15%
 $middle-padding: 30px
 $footer-padding: 20px
-$footer-height: 75px + $footer-padding
+$footer-height: 50px + $footer-padding
 
 *
    margin: 0
@@ -105,15 +105,27 @@ h3
    height: $footer-height
    position: relative
 
-.logo
+.sidebar-content
    display: block
    margin: 10px
    width: $sidebar-width
    position: fixed !important
+   text-align: center
 
-#middle-content
+.middle-content
    padding: $middle-padding
 
-#footer-content
+.footer-content
    padding: 0 0 0 $footer-padding
    text-align: center
+
+.typewriter
+   white-space: pre-wrap
+   margin-right: -6px
+
+.caret
+   background: #777
+
+#logo
+   display: block
+   width: 100%

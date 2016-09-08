@@ -10,6 +10,7 @@
 <!-- Load the Paper.js library -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js"></script>
 <script type="text/javascript" src="node_modules/rpolygon/rpolygon.js"></script>
+<script type="text/javascript" src="node_modules/realistic-typewriter.js/build/typewriter-bundle.js"></script>
 <!-- Define inlined JavaScript -->
 <script type="text/javascript">
 
@@ -17,6 +18,26 @@
    window.onload = function() {
       fillCanvas(document.getElementById('background'), '#555555', 13, 13, 4);
    }
+
+   var typewriter = require('typewriter');
+   var twSpan = document.getElementById('typewriter');
+   var tw = typewriter(twSpan).withAccuracy(95)
+                              .withMinimumSpeed(5)
+                              .withMaximumSpeed(17)
+                              .build();
+   tw.put('$ ')
+     .waitRange(500, 1000)
+     .type('ls realistic-typewriter.js')
+     .put('<br/>')
+     .waitRange(1000, 1500)
+     .put('ls: realistic-typewriter.js: No such file or directory<br/>')
+     .put('$ ')
+     .waitRange(1000, 1500)
+     .type('exit')
+     .put('<br/>')
+     .wait(500)
+     .put('logout<br/><br/>')
+     .put('[Process completed]<br/>');
 
 </script>
 
@@ -33,10 +54,11 @@
 
          <main class="content">
 
-            <div id="middle-content">
+            <div class="middle-content">
 
                <h1>
-                  Developer
+                  <span id="typewriter" class="typewriter"></span>
+                  <span class="caret">&nbsp;</span>
                </h1>
 
                <p>
@@ -83,7 +105,25 @@
 
       <aside class="left-sidebar">
 
-         <img class="logo" src="images/logo.svg" alt="Nicholas Roberts">
+         <div class="sidebar-content">
+            <img id="logo" src="images/logo.svg" alt="Nicholas Roberts">
+            <p>
+               <br/>
+               Home
+               <br/>
+               About
+               <br/>
+               Projects
+               <br/>
+               Resume
+               <br/><br/>
+               <i class="fa fa-github" aria-hidden="true"></i>
+               <i class="fa fa-linkedin" aria-hidden="true"></i>
+               <i class="fa fa-instagram" aria-hidden="true"></i>
+               <i class="fa fa-twitter" aria-hidden="true"></i>
+               <br/>
+            </p>
+         </div>
 
       </aside>
 
@@ -91,7 +131,7 @@
 
    <footer class="footer">
 
-      <div id="footer-content">
+      <div class="footer-content">
 
          <p>
             <br/>
@@ -100,14 +140,7 @@
             <i class="fa fa-heart-o" aria-hidden="true"></i>
             using Docker, npm, Sass, and Ember.js
             <br/>
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-google-plus" aria-hidden="true"></i>
-            <i class="fa fa-snapchat" aria-hidden="true"></i>
-            <i class="fa fa-pinterest" aria-hidden="true"></i>
+
          </p>
 
       </div>

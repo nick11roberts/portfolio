@@ -58,7 +58,7 @@ h3 {
 
 .middle {
   width: 100%;
-  padding: 0 0 95px;
+  padding: 0 0 70px;
   position: relative; }
 
 .middle:after {
@@ -81,22 +81,34 @@ h3 {
   position: relative; }
 
 .footer {
-  margin: -95px auto 0;
+  margin: -70px auto 0;
   min-width: 1000px;
-  height: 95px;
+  height: 70px;
   position: relative; }
 
-.logo {
+.sidebar-content {
   display: block;
   margin: 10px;
   width: 15%;
-  position: fixed !important; }
+  position: fixed !important;
+  text-align: center; }
 
-#middle-content {
+.middle-content {
   padding: 30px; }
 
-#footer-content {
+.footer-content {
   padding: 0 0 0 20px;
   text-align: center; }
+
+.typewriter {
+  white-space: pre-wrap;
+  margin-right: -6px; }
+
+.caret {
+  background: #777; }
+
+#logo {
+  display: block;
+  width: 100%; }
 
 /*# sourceMappingURL=index.css.map */
