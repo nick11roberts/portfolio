@@ -1,0 +1,157 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css)
+
+$font-stack: 'Kameron', serif, Helvetica, serif, 'Sansita One', cursive
+$h1font: 'Sansita One', cursive
+$h2font: 'Sansita One', cursive
+$h3font: 'Sansita One', cursive
+$pfont: 'Kameron', serif
+
+$color-primary-0: #393939
+$color-primary-1: #E2E0DE
+$color-primary-2: #E2E0DE
+$color-primary-3: #E2E0DE
+$color-primary-4: #555555
+
+$sidebar-width: 15%
+$middle-padding: 30px
+$footer-padding: 20px
+$footer-height: 50px + $footer-padding
+
+*
+   margin: 0
+   padding: 0
+
+html
+   margin: 0
+   padding: 0
+   height: 100%
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary
+   display: block
+
+body
+   font: 100% $font-stack
+   color: $color-primary-2
+   background-color: $color-primary-0
+   margin: 0
+   padding: 0
+   height: 100%
+
+
+footer
+   background-color: $color-primary-4
+
+canvas
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   height: 100%
+   z-index: -1
+
+p
+   font-family: $pfont
+   color: $color-primary-2
+   line-height: 1.5
+
+h1
+   font-size: 200%
+   font-family: $h1font
+   color: $color-primary-1
+   line-height: 3.0
+
+h2
+   font-size: 130%
+   font-family: $h2font
+   color: $color-primary-3
+   line-height: 2.5
+
+h3
+   font-size: 100%
+   font-family: $h3font
+   color: $color-primary-3
+   line-height: 2.0
+
+a:link
+   background-color: $color-primary-0
+   color: $color-primary-2
+   text-decoration: none
+a:visited
+   background-color: $color-primary-0
+   color: $color-primary-2
+   text-decoration: none
+a:hover
+   background-color: $color-primary-2
+   color: $color-primary-0
+   text-decoration: none
+a:active
+   background-color: $color-primary-2
+   color: $color-primary-0
+   text-decoration: none
+.wrapper
+   width: 100%
+   min-width: 1000px
+   min-height: 100%
+   height: auto !important
+   height: 100%
+
+.middle
+   width: 100%
+   padding: 0 0 $footer-height
+   position: relative
+
+.middle:after
+   display: table
+   clear: both
+   content: ''
+
+.container
+   width: 100%
+   float: left
+   overflow: hidden
+   height: 100%
+
+.content
+   padding: 0 0 0 $sidebar-width
+   height: 100%
+
+.left-sidebar
+   float: left
+   width: $sidebar-width
+   margin-left: -100%
+   position: relative
+
+.footer
+   margin: -$footer-height auto 0
+   min-width: 1000px
+   height: $footer-height
+   bottom: 0
+   position: relative
+
+.sidebar-content
+   display: block
+   margin: 10px
+   width: $sidebar-width
+   position: fixed !important
+   text-align: center
+
+.middle-content
+   padding: $middle-padding
+   height: 100%
+
+.footer-content
+   padding: 0 0 0 $footer-padding
+   text-align: center
+
+.centered
+   text-align: center
+
+.full-height
+   height: 100vh !important
+
+.caret
+   background: #555555
+
+#logo
+   display: block
+   width: 100%

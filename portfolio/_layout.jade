@@ -1,0 +1,21 @@
+doctype html
+html
+   head
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css')
+      link(href='https://fonts.googleapis.com/css?family=Kameron|Sansita+One', rel='stylesheet')
+      link(type='text/css', rel='stylesheet', href='/stylesheets/index.css')
+
+      script(src='https://use.fontawesome.com/9fb8fdf036.js')
+      // Load the Paper.js library
+      script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.10.2/paper-full.min.js')
+      script(type='text/javascript', src='/node_modules/rpolygon/rpolygon.js')
+      script(type='text/javascript', src='/node_modules/realistic-typewriter.js/build/typewriter-bundle.js')
+      script(type='text/javascript', src='/javascript/index.js')
+
+      title
+         | Nicholas Roberts
+
+   body
+      canvas#background
+         | Your browser does not support the canvas element. 
+      != yield
