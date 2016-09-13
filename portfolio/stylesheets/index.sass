@@ -12,6 +12,9 @@ $color-primary-2: #E2E0DE
 $color-primary-3: #E2E0DE
 $color-primary-4: #555555
 
+$color-term-prompt-0: #ff2465
+$color-term-prompt-1: #16ac9f
+
 $sidebar-width: 15%
 $middle-padding: 30px
 $footer-padding: 20px
@@ -37,7 +40,6 @@ body
    padding: 0
    height: 100%
 
-
 footer
    background-color: $color-primary-4
 
@@ -58,19 +60,19 @@ h1
    font-size: 200%
    font-family: $h1font
    color: $color-primary-1
-   line-height: 3.0
+   line-height: 2
 
 h2
    font-size: 130%
    font-family: $h2font
    color: $color-primary-3
-   line-height: 2.5
+   line-height: 2
 
 h3
    font-size: 100%
    font-family: $h3font
    color: $color-primary-3
-   line-height: 2.0
+   line-height: 2
 
 a:link
    background-color: $color-primary-0
@@ -105,7 +107,7 @@ a:active
    clear: both
    content: ''
 
-.container
+.main-container
    width: 100%
    float: left
    overflow: hidden
@@ -147,10 +149,29 @@ a:active
    text-align: center
 
 .full-height
-   height: 100vh !important
+   min-height: 100vh !important
 
 .caret
    background: #555555
+
+.term
+   color: $color-term-prompt-0 !important
+   display: inline
+
+.term-user
+   color: $color-term-prompt-1 !important
+   display: inline
+
+.term-host
+   color: $color-term-prompt-1 !important
+   display: inline
+
+.term-dir
+   color: $color-term-prompt-1 !important
+   display: inline
+
+.skills-list
+
 
 #logo
    display: block
