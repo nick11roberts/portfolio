@@ -34,7 +34,7 @@ window.onload = function() {
          &emsp;&emsp; Check out my portfolio below.<br/><br/>')
       .put(terminalPropmt)
       .waitRange(250, 500)
-      .type('cat github.com/nick11roberts/portfolio/')
+      .type('cat ~/github.com/nick11roberts/portfolio/')
       .put('<br/>')
       .waitRange(1000, 1500)
       .put('<a href="#skills">\
