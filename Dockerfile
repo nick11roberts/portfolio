@@ -17,4 +17,6 @@ COPY . $HOME/portfolio
 RUN chown -R app:app $HOME/*
 USER app
 
-CMD ["node", "index.js"]
+RUN npm install
+RUN cd portfolio
+CMD ["harp", "server"]
