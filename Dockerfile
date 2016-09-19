@@ -1,22 +1,21 @@
 FROM node:4.3.2
 
 RUN useradd --user-group --create-home --shell /bin/false app &&\
-  npm install --global npm@3.7.5
+  npm install --global npm@2.15.8
 
 ENV HOME=/home/app
 
-COPY package.json npm-shrinkwrap.json $HOME/portfolio/
-RUN chown -R app:app $HOME/*
-
 USER app
 WORKDIR $HOME/portfolio
-RUN npm install
 
 USER root
+RUN npm install -g harp
 COPY . $HOME/portfolio
 RUN chown -R app:app $HOME/*
 USER app
 
+RUN cd portfolio
 RUN npm install
 RUN cd portfolio
-CMD ["harp", "server"]
+RUN npm install
+CMD ["harp", "server", "portfolio"]
