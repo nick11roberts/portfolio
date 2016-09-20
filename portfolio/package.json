@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "masonry-layout": "^4.1.1",
     "rpolygon": "^0.4.4",
     "typewriter": "^0.2.1"
   },
