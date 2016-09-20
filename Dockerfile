@@ -18,4 +18,4 @@ RUN cd portfolio
 RUN npm install
 RUN cd portfolio
 RUN npm install
-CMD ["harp", "server", "portfolio"]
+CMD ["harp", "server", "portfolio", "--port", "80"]
