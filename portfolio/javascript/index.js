@@ -60,4 +60,11 @@ window.onload = function() {
       });
    });
 
+   // For masonry layout
+   // vanilla JS
+  var msnry = new Masonry( '.mgrid', {
+    isFitWidth: true,
+    itemSelector: '.mgrid-item'
+  });
+
 }
