@@ -64,6 +64,7 @@ window.onload = function() {
    // vanilla JS
   var msnry = new Masonry( '.mgrid', {
     isFitWidth: true,
+    columnWidth: 1,
     itemSelector: '.mgrid-item'
   });
 
