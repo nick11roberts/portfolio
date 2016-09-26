@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source ~/portfolio/docker.env
 dvm use
 docker rm -fv portfolio
