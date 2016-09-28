@@ -15,10 +15,10 @@ window.onload = function() {
                               .withMinimumSpeed(5)
                               .withMaximumSpeed(17)
                               .build();
-   var terminalPropmt = '<p class="term">[</p> <p class="term-user">you</p> \
-      <p class="term-host">nickrobertsportfolio</p> \
-      <p class="term-dir">~</p> \
-      <p class="term">] <i class="fa fa-bolt" aria-hidden="true"></i></p> '
+   var terminalPropmt = '<p class="term terminal">[</p> <p class="term-user">you</p> \
+      <p class="term-host terminal">nickrobertsportfolio</p> \
+      <p class="term-dir terminal">~</p> \
+      <p class="term terminal">] <i class="fa fa-bolt" aria-hidden="true"></i></p> '
    tw.put(terminalPropmt)
       .waitRange(250, 500)
       .type('man nicholas-roberts | cat')
