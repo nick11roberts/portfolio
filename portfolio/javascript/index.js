@@ -32,7 +32,7 @@ window.onload = function() {
       .put('DESCRIPTION<br/>')
       .put('&emsp;&emsp; Developer, UC San Diego undergraduate, \
          and machine learner, <br/>\
-         &emsp;&emsp; as well as a cofounder and developer of Skqrl, \
+         &emsp;&emsp; as well as a cofounder and codeveloper of Skqrl, \
          an experience sharing platform.<br/>\
          &emsp;&emsp; Check out my portfolio below.<br/><br/>')
       .put(terminalPropmt)
