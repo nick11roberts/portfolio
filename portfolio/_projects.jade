@@ -118,3 +118,15 @@ div.full-height#projects
              | Has had over 1,100 total installs on the Google Play Store.
           br
           br
+       div.light-bg-box
+          h2.centered.dark
+             | GitHub contributions
+          script( src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js")
+
+          link(rel="stylesheet", href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css")
+
+          div.calendar
+             | Loading GitHub contribution graph...
+            
+          script
+            | GitHubCalendar(".calendar", "nick11roberts");
