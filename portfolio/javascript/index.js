@@ -1,6 +1,9 @@
 // Only executed our code once the DOM is ready.
 window.onload = function() {
 
+   // For parallax effect
+   $('.parallax-window').parallax({imageSrc: '/images/profile.jpg'});
+
    // For canvas polygon bg
    fillCanvas(document.getElementById('background'),
       '#555555', 13, 13, 4);
