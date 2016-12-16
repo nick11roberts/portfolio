@@ -8,6 +8,7 @@
   "description": "To build sass, use `sass --watch portfolio/sass:portfolio/stylesheets`",
   "main": "index.js",
   "scripts": {
+    "postinstall": "cd portfolio && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
