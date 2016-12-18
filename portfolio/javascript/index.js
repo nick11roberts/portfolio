@@ -30,8 +30,7 @@ window.onload = function() {
       .put('SYNOPSIS<br/>')
       .put('&emsp;&emsp; nicholas-roberts [options] [project ..]<br/><br/>')
       .put('DESCRIPTION<br/>')
-      .put('&emsp;&emsp; Developer, UC San Diego undergraduate, \
-         and machine learner, <br/>\
+      .put('&emsp;&emsp; Developer and UC San Diego undergraduate. <br/>\
          &emsp;&emsp; Check out my portfolio below.<br/><br/>')
       .put(terminalPropmt)
       .waitRange(250, 500)
